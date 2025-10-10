@@ -1,4 +1,4 @@
-import { BookOpen, Palette, FlaskConical, Music, Trophy, Globe } from 'lucide-react';
+import { BookOpen, Palette, FlaskConical, Music, Computer, Globe } from 'lucide-react';
 
 export default function Programs() {
   const programs = [
@@ -21,21 +21,21 @@ export default function Programs() {
       color: 'from-yellow-600 to-yellow-700',
     },
     {
-      icon: Trophy,
-      title: 'Athletics',
-      description: '15 varsity sports with championship-winning teams and state-of-the-art athletic facilities.',
+      icon: Computer,
+      title: 'Information Technology',
+      description: 'Information Technology equips students with digital skills and technical knowledge to effectively use, manage, and innovate with modern computer systems and software.',
       color: 'from-orange-500 to-orange-600',
     },
     {
       icon: Music,
       title: 'Music Programs',
-      description: 'Award-winning band, orchestra, and choir with regular performances and competitions.',
+      description: 'Music nurtures creativity and expression, helping students develop rhythm, coordination, and an appreciation for the art of sound and performance.',
       color: 'from-pink-500 to-pink-600',
     },
     {
       icon: Globe,
-      title: 'Global Studies',
-      description: 'International exchange programs and multicultural education preparing students for a global society.',
+      title: 'Language',
+      description: 'English and Spanish strengthen students’ communication skills, fostering fluency, comprehension, and cultural awareness through reading, writing, and conversation in both languages.',
       color: 'from-teal-500 to-teal-600',
     },
   ];
