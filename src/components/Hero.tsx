@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="inline-block px-4 py-2 bg-blue-100 rounded-full">
-              <span className="text-blue-700 font-semibold text-sm">Est. 1965</span>
+              <span className="text-blue-700 font-semibold text-sm">Hello!</span>
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Welcome to
