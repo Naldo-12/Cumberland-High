@@ -24,7 +24,7 @@ export default function Contact() {
                     <div className="font-semibold text-gray-900 mb-1">Address</div>
                     <div className="text-gray-600">
                       1 Cumberland Drive<br />
-                      Gregory Park, Jamaica
+                      Gregory Park, St. Catherine
                     </div>
                   </div>
                 </div>
