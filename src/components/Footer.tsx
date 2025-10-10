@@ -14,7 +14,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Empowering students to achieve their dreams through quality education and community support since 1965.
+              Empowering students to achieve their dreams through quality education and community support.
             </p>
           </div>
 
@@ -56,8 +56,8 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 text-sm">
               1000 Cumberland Drive<br />
-              Cumberland, MD 21502<br />
-              (301) 555-0123
+              Gregory Park, Jamaica<br />
+              (876) 704-8365
             </p>
           </div>
         </div>
