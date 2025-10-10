@@ -45,7 +45,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Email</div>
-                    <div className="text-gray-600">info@cumberlandhs.edu</div>
+                    <div className="text-gray-600">cumberland.high.sce@moey.gov.jm</div>
                   </div>
                 </div>
 
