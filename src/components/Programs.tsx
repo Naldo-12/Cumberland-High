@@ -4,14 +4,14 @@ export default function Programs() {
   const programs = [
     {
       icon: BookOpen,
-      title: 'Advanced Placement',
-      description: 'Over 20 AP courses offering college-level curriculum and the opportunity to earn college credit.',
+      title: 'Social Studies',
+      description: 'Social Studies helps students understand human society, culture, and the world around them, fostering informed and responsible citizens.',
       color: 'from-blue-500 to-blue-600',
     },
     {
       icon: FlaskConical,
-      title: 'STEM Excellence',
-      description: 'Cutting-edge science and technology programs with fully equipped labs and robotics competitions.',
+      title: 'Science',
+      description: 'Science encourages curiosity and discovery, helping students explore the natural world through observation, experimentation, and critical thinking.',
       color: 'from-green-500 to-green-600',
     },
     {
