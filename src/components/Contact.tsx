@@ -23,8 +23,8 @@ export default function Contact() {
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Address</div>
                     <div className="text-gray-600">
-                      1000 Cumberland Drive<br />
-                      Cumberland, MD 21502
+                      1 Cumberland Drive<br />
+                      Gregory Park, Jamaica
                     </div>
                   </div>
                 </div>
@@ -35,7 +35,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Phone</div>
-                    <div className="text-gray-600">(301) 555-0123</div>
+                    <div className="text-gray-600">(876) 704-8365</div>
                   </div>
                 </div>
 
@@ -56,7 +56,7 @@ export default function Contact() {
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Office Hours</div>
                     <div className="text-gray-600">
-                      Monday - Friday: 7:30 AM - 4:00 PM<br />
+                      Monday - Friday: 8:00 AM - 4:00 PM<br />
                       Saturday - Sunday: Closed
                     </div>
                   </div>
