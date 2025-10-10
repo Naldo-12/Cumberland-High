@@ -26,7 +26,7 @@ export default function News() {
   ];
 
   return (
-    <section id="news" className="py-20 bg-gradient-to-br from-emerald-50 to-blue-50">
+    <section id="news" className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest News</h2>
@@ -48,7 +48,7 @@ export default function News() {
               />
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">
+                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">
                     {item.category}
                   </span>
                   <span className="text-sm text-gray-500">{item.date}</span>
@@ -59,7 +59,7 @@ export default function News() {
                 <p className="text-gray-600 mb-4 leading-relaxed">{item.excerpt}</p>
                 <a
                   href="#"
-                  className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 transition-colors"
+                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
                 >
                   Read More
                   <ChevronRight className="ml-1 h-4 w-4" />
@@ -70,7 +70,7 @@ export default function News() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="inline-flex items-center px-6 py-3 border-2 border-emerald-600 text-emerald-600 font-semibold rounded-lg hover:bg-emerald-50 transition-colors">
+          <button className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
             View All News
             <ChevronRight className="ml-2 h-5 w-5" />
           </button>

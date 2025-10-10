@@ -17,8 +17,8 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-emerald-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Address</div>
@@ -30,8 +30,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-emerald-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Phone</div>
@@ -40,8 +40,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-emerald-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Email</div>
@@ -50,8 +50,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-emerald-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Office Hours</div>
@@ -64,18 +64,18 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl p-6">
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6">
               <h4 className="font-bold text-gray-900 mb-2">School Tours</h4>
               <p className="text-gray-600 mb-4">
                 Interested in visiting our campus? Schedule a guided tour to experience Cumberland High firsthand.
               </p>
-              <button className="w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors">
+              <button className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
                 Schedule a Tour
               </button>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-gray-50 to-emerald-50 rounded-xl p-8">
+          <div className="bg-gradient-to-br from-gray-50 to-green-50 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
             <form className="space-y-4">
               <div>
@@ -85,7 +85,7 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="John Doe"
                 />
               </div>
@@ -97,7 +97,7 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="john@example.com"
                 />
               </div>
@@ -109,7 +109,7 @@ export default function Contact() {
                 <input
                   type="text"
                   id="subject"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="How can we help?"
                 />
               </div>
@@ -128,7 +128,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors shadow-md hover:shadow-lg"
+                className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg"
               >
                 Send Message
               </button>

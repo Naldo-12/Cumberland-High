@@ -1,4 +1,4 @@
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <GraduationCap className="h-8 w-8 text-emerald-600" />
+            <img src="/logo.jpg" alt="Cumberland High School" className="h-12 w-12 object-contain" />
             <div className="flex flex-col">
               <span className="font-bold text-lg text-gray-900 leading-tight">Cumberland High</span>
               <span className="text-xs text-gray-600">Excellence in Education</span>
@@ -30,7 +30,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 {item.name}
               </a>
@@ -51,7 +51,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-3 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md font-medium transition-colors"
+                className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md font-medium transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

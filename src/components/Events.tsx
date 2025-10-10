@@ -46,10 +46,10 @@ export default function Events() {
           {events.map((event, index) => (
             <div
               key={index}
-              className="flex gap-6 p-6 bg-gradient-to-br from-white to-emerald-50 rounded-xl border border-emerald-100 hover:shadow-lg transition-shadow"
+              className="flex gap-6 p-6 bg-gradient-to-br from-white to-blue-50 rounded-xl border border-blue-100 hover:shadow-lg transition-shadow"
             >
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-emerald-600 rounded-lg flex flex-col items-center justify-center text-white">
+                <div className="w-16 h-16 bg-blue-600 rounded-lg flex flex-col items-center justify-center text-white">
                   <span className="text-xs font-semibold">{event.date.split(' ')[0]}</span>
                   <span className="text-2xl font-bold">{event.date.split(' ')[1]}</span>
                 </div>
@@ -71,7 +71,7 @@ export default function Events() {
         </div>
 
         <div className="mt-12 text-center">
-          <button className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-colors shadow-md">
+          <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md">
             <Calendar className="h-5 w-5 mr-2" />
             View Full Calendar
           </button>

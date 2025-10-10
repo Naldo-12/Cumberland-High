@@ -12,13 +12,13 @@ export default function Programs() {
       icon: FlaskConical,
       title: 'STEM Excellence',
       description: 'Cutting-edge science and technology programs with fully equipped labs and robotics competitions.',
-      color: 'from-emerald-500 to-emerald-600',
+      color: 'from-green-500 to-green-600',
     },
     {
       icon: Palette,
       title: 'Arts & Creativity',
       description: 'Comprehensive visual and performing arts programs including theater, music, and digital media.',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-yellow-600 to-yellow-700',
     },
     {
       icon: Trophy,
@@ -41,7 +41,7 @@ export default function Programs() {
   ];
 
   return (
-    <section id="programs" className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
+    <section id="programs" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Programs</h2>

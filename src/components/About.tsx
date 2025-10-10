@@ -24,9 +24,9 @@ export default function About() {
             return (
               <div
                 key={stat.label}
-                className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
+                className="bg-gradient-to-br from-blue-50 to-green-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
               >
-                <Icon className="h-10 w-10 text-emerald-600 mx-auto mb-4" />
+                <Icon className="h-10 w-10 text-blue-600 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
@@ -36,8 +36,8 @@ export default function About() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <img
-            src="https://images.pexels.com/photos/8500447/pexels-photo-8500447.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="School building"
+            src="/mission.jpg"
+            alt="Our Mission"
             className="rounded-2xl shadow-xl w-full h-auto object-cover"
           />
           <div className="space-y-6">
