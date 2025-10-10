@@ -4,6 +4,8 @@ export default function About() {
   const stats = [
     { icon: Users, value: '1,200+', label: 'Students' },
     { icon: BookOpen, value: '85+', label: 'Faculty Members' },
+    { icon: Award, value: '95%', label: 'Graduation Rate' },
+    { icon: Target, value: '30+', label: 'Programs Offered' },
   ];
 
   return (
