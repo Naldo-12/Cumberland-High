@@ -3,11 +3,11 @@ import { ChevronRight } from 'lucide-react';
 export default function News() {
   const newsItems = [
     {
-      image: 'https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=800',
-      category: 'Academics',
-      date: 'October 8, 2025',
-      title: 'Cumberland Students Excel at State Science Fair',
-      excerpt: 'Five students from our STEM program earned top honors at the state competition, showcasing innovative research projects.',
+      image: '/graduation-2025.jpg',
+      category: 'Celebration',
+      date: 'July 1, 2025',
+      title: 'Saluting the Cumberland High School Graduating Class of 2025!',
+      excerpt: 'Celebrating a significant milestone under the theme "Overcoming Challenges, Building Character, Achieving Excellence." Congratulations to students, teachers, and parents on this amazing achievement!',
     },
     {
       image: 'https://images.pexels.com/photos/159376/soccer-football-ball-sport-159376.jpeg?auto=compress&cs=tinysrgb&w=800',
