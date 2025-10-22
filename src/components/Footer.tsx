@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/logo.jpg" alt="Cumberland High School" className="h-12 w-12 object-contain" />
+              <img src="/real-logo.jpg" alt="Cumberland High School" className="h-12 w-12 object-contain" />
               <div>
                 <div className="font-bold text-lg">Cumberland High</div>
                 <div className="text-sm text-gray-400">Excellence in Education</div>
