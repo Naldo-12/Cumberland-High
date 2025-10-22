@@ -1,4 +1,4 @@
-/*import { Calendar, MapPin, Clock } from 'lucide-react';
+import { Calendar, MapPin, Clock } from 'lucide-react';
 
 export default function Events() {
   const events = [
@@ -80,4 +80,4 @@ export default function Events() {
     </section>
   );
 }
-*/
+
