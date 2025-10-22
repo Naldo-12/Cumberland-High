@@ -17,11 +17,11 @@ export default function News() {
       excerpt: 'Our varsity soccer team secured a decisive victory, earning their spot in the regional championship next week.',
     },
     {
-      image: 'https://images.pexels.com/photos/8500453/pexels-photo-8500453.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/competition.jpg',
       category: 'Community',
-      date: 'October 1, 2025',
-      title: 'New Library Wing Opens to Students',
-      excerpt: 'The state-of-the-art addition features collaborative spaces, digital resources, and a maker lab for hands-on learning.',
+      date: 'June 27, 2024',
+      title: 'Cumberland High School remains the TVET Center of Excellence!',
+      excerpt: 'Second place 🥈 in the VM Foundation Limited social enterprise competition!',
     },
   ];
 
