@@ -8,7 +8,7 @@ export default function Header() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Programs', href: '#programs' },
-    /*{ name: 'Events', href: '#events' },*/
+    { name: 'Events', href: '#events' },
     { name: 'News', href: '#news' },
     { name: 'Contact', href: '#contact' },
   ];
