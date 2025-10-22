@@ -10,11 +10,11 @@ export default function News() {
       excerpt: 'Celebrating a significant milestone under the theme "Overcoming Challenges, Building Character, Achieving Excellence." Congratulations to students, teachers, and parents on this amazing achievement!',
     },
     {
-      image: 'https://images.pexels.com/photos/159376/soccer-football-ball-sport-159376.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/football.jpg',
       category: 'Athletics',
-      date: 'October 5, 2025',
-      title: 'Eagles Soccer Team Advances to Regional Finals',
-      excerpt: 'Our varsity soccer team secured a decisive victory, earning their spot in the regional championship next week.',
+      date: 'November 15, 2023',
+      title: 'Schoolboy Football 2023',
+      excerpt: 'Young men who played their hearts out at each match!',
     },
     {
       image: '/competition.jpg',
