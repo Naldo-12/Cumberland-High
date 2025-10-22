@@ -18,7 +18,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <img src="/logo.jpg" alt="Cumberland High School" className="h-12 w-12 object-contain" />
+            <img src="/real-logo.png" alt="Cumberland High School" className="h-12 w-12 object-contain" />
             <div className="flex flex-col">
               <span className="font-bold text-lg text-gray-900 leading-tight">Cumberland High</span>
               <span className="text-xs text-gray-600">Excellence in Education</span>
