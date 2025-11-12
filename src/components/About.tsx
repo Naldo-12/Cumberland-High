@@ -41,18 +41,12 @@ export default function About() {
             className="rounded-2xl shadow-xl w-full h-auto object-cover"
           />
           <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-gray-900">Our Mission</h3>
+            <h3 className="text-3xl font-bold text-gray-900">Our Mission and Vision</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              At Cumberland High School, we are committed to providing a comprehensive education
-              that prepares students for success in college, career, and life. Our dedicated
-              faculty creates an environment where every student can thrive academically,
-              socially, and personally.
+              Cumberland High Schoolis the future-focused Centre of Excellence, that equips all students with specialised technical, vocation education and training programmesas well as the relevant social skills and appropriate behaviours that match world-class standards and are responsive to industry needs.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We believe in nurturing critical thinking, creativity, and character while
-              maintaining the highest academic standards. Our state-of-the-art facilities and
-              innovative programs ensure students receive a well-rounded education that prepares
-              them for the challenges of tomorrow.
+              Cumberland High School commits to being an effective TVET-based institution that offers a high quality education and training curriculum that is outcome-driven technologically responsive and global in outlook. Through transformational and visionary leadership, a cadre of qualified and devoted staff and the support of stakeholders, students will be empowered to become fully functional and productive members of an evolving society.
             </p>
           </div>
         </div>
