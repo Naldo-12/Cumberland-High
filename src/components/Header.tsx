@@ -1,15 +1,21 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Header() {
+interface HeaderProps {
+  onNavigate: (page: 'home' | 'codeofconduct') => void;
+  currentPage: 'home' | 'codeofconduct';
+}
+
+export default function Header({ onNavigate, currentPage }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', page: 'home' as const },
     { name: 'About', href: '#about' },
     { name: 'Programs', href: '#programs' },
     { name: 'Events', href: '#events' },
     { name: 'News', href: '#news' },
+    { name: 'Code of Conduct', page: 'codeofconduct' as const },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -27,13 +33,22 @@ export default function Header() {
 
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => {
+                  if ('page' in item) {
+                    onNavigate(item.page);
+                  }
+                }}
+                href={('href' in item) ? item.href : undefined}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
-                {item.name}
-              </a>
+                {'href' in item ? (
+                  <a href={item.href}>{item.name}</a>
+                ) : (
+                  item.name
+                )}
+              </button>
             ))}
           </div>
 
@@ -48,14 +63,22 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 space-y-2">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md font-medium transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  if ('page' in item) {
+                    onNavigate(item.page);
+                  }
+                  setMobileMenuOpen(false);
+                }}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md font-medium transition-colors"
               >
-                {item.name}
-              </a>
+                {'href' in item ? (
+                  <a href={item.href} onClick={(e) => e.stopPropagation()}>{item.name}</a>
+                ) : (
+                  item.name
+                )}
+              </button>
             ))}
           </div>
         )}
