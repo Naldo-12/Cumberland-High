@@ -43,7 +43,7 @@ export default function About() {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-900">Our Mission and Vision</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Cumberland High Schoolis the future-focused Centre of Excellence, that equips all students with specialised technical, vocation education and training programmesas well as the relevant social skills and appropriate behaviours that match world-class standards and are responsive to industry needs.
+              Cumberland High School is the future-focused Centre of Excellence, that equips all students with specialised technical, vocation education and training programmesas well as the relevant social skills and appropriate behaviours that match world-class standards and are responsive to industry needs.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
               Cumberland High School commits to being an effective TVET-based institution that offers a high quality education and training curriculum that is outcome-driven technologically responsive and global in outlook. Through transformational and visionary leadership, a cadre of qualified and devoted staff and the support of stakeholders, students will be empowered to become fully functional and productive members of an evolving society.
