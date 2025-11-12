@@ -5,7 +5,7 @@ export default function About() {
     { icon: Users, value: '1,200+', label: 'Students' },
     { icon: BookOpen, value: '60+', label: 'Faculty Members' },
     { icon: Award, value: '95%', label: 'Graduation Rate' },
-    { icon: Target, value: '30+', label: 'Programs Offered' },
+    { icon: Target, value: '11', label: 'Programs Offered' },
   ];
 
   return (
