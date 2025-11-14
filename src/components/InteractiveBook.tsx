@@ -21,10 +21,8 @@ export default function InteractiveBook() {
     },
     {
       title: 'Table of Contents',
-      content: 'Vision Statement..............................................iv',
-      content: 'Mission Statement.............................................iv',
-      content: 'School Motto..................................................iv',
-      content: 'School Song...................................................iv',
+      content: 'Vision Statement..............................................iv 
+      'Mission Statement.............................................iv',
       isCover: false,
     },
     {
