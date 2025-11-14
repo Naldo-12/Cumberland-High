@@ -18,7 +18,7 @@ export default function News() {
     },
     {
       image: '/competition.jpg',
-      category: 'Community',
+      category: 'Competition',
       date: 'June 27, 2024',
       title: 'Cumberland High School remains the TVET Center of Excellence!',
       excerpt: 'Second place 🥈 in the VM Foundation Limited social enterprise competition!',
