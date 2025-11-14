@@ -27,7 +27,7 @@ export default function InteractiveBook() {
     {
       content: 'Mission Statement..............................................iv',
       isCover: false,
-    }
+    },
     {
       title: 'Attendance & Punctuality',
       content: 'Regular attendance and punctuality are required to maintain good standing. Excessive absences may result in disciplinary action.',
