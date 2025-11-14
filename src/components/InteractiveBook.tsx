@@ -25,6 +25,10 @@ export default function InteractiveBook() {
       isCover: false,
     },
     {
+      content: 'Mission Statement..............................................iv',
+      isCover: false,
+    }
+    {
       title: 'Attendance & Punctuality',
       content: 'Regular attendance and punctuality are required to maintain good standing. Excessive absences may result in disciplinary action.',
       isCover: false,
@@ -156,7 +160,7 @@ export default function InteractiveBook() {
         }
 
         .book {
-          position: middle;
+          position: relative;
           width: 100%;
           max-width: 800px;
           height: 500px;
