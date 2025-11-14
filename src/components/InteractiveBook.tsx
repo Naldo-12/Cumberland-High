@@ -5,29 +5,37 @@ export default function InteractiveBook() {
   const [currentPage, setCurrentPage] = useState(0);
   const [isFlipping, setIsFlipping] = useState(false);
   const [flipDirection, setFlipDirection] = useState<'left' | 'right'>('right');
+  const [searchInput, setSearchInput] = useState('');
 
   const pages = [
     {
       title: 'Code of Conduct',
       content: 'Welcome to your digital handbook! This is the cover page.',
+      isCover: true,
     },
     {
       title: 'Respect & Integrity',
       content: 'Students are expected to treat all peers, staff, and property with respect. Integrity is the foundation of our school community.',
+      isCover: false,
     },
     {
       title: 'Attendance & Punctuality',
       content: 'Regular attendance and punctuality are required to maintain good standing. Excessive absences may result in disciplinary action.',
+      isCover: false,
     },
     {
       title: 'Dress Code',
       content: 'Students must adhere to the school\'s dress code policy at all times. Violations will be addressed with appropriate consequences.',
+      isCover: false,
     },
     {
       title: 'Academic Honesty',
       content: 'Cheating, plagiarism, or misrepresentation of work is strictly prohibited. Academic integrity is essential to our mission.',
+      isCover: false,
     },
   ];
+
+  const isCoverPage = currentPage === 0;
 
   const nextPage = () => {
     if (currentPage < pages.length - 1 && !isFlipping) {
@@ -48,6 +56,34 @@ export default function InteractiveBook() {
         setCurrentPage(currentPage - 1);
         setIsFlipping(false);
       }, 700);
+    }
+  };
+
+  const goToPage = (pageNum: number) => {
+    if (pageNum >= 0 && pageNum < pages.length && pageNum !== currentPage && !isFlipping) {
+      setIsFlipping(true);
+      if (pageNum > currentPage) {
+        setFlipDirection('right');
+      } else {
+        setFlipDirection('left');
+      }
+      setTimeout(() => {
+        setCurrentPage(pageNum);
+        setIsFlipping(false);
+      }, 700);
+    }
+    setSearchInput('');
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setSearchInput(value);
+
+    if (value.trim()) {
+      const pageNum = parseInt(value, 10) - 1;
+      if (!isNaN(pageNum) && pageNum >= 0 && pageNum < pages.length) {
+        goToPage(pageNum);
+      }
     }
   };
 
@@ -86,6 +122,24 @@ export default function InteractiveBook() {
           }
         }
 
+        @keyframes coverFlip {
+          0% {
+            transform: rotateY(0deg);
+          }
+          100% {
+            transform: rotateY(160deg);
+          }
+        }
+
+        @keyframes coverFlipBack {
+          0% {
+            transform: rotateY(160deg);
+          }
+          100% {
+            transform: rotateY(0deg);
+          }
+        }
+
         .book-container {
           perspective: 2000px;
           width: 100%;
@@ -103,6 +157,66 @@ export default function InteractiveBook() {
           display: flex;
           gap: 0;
           transform-style: preserve-3d;
+        }
+
+        .book.cover-view {
+          perspective: 1200px;
+        }
+
+        .cover-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          perspective: 1200px;
+        }
+
+        .cover-page {
+          position: absolute;
+          width: 50%;
+          height: 100%;
+          background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+          box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.1),
+                      -8px 8px 24px rgba(0, 0, 0, 0.3);
+          padding: 40px;
+          color: #1f2937;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          transform-style: preserve-3d;
+          border-radius: 0 8px 8px 0;
+          backface-visibility: hidden;
+          left: 0;
+        }
+
+        .cover-page.flipping {
+          animation: coverFlip 0.7s ease-in-out forwards;
+        }
+
+        .cover-page.back {
+          animation: coverFlipBack 0.7s ease-in-out forwards;
+        }
+
+        .cover-inside {
+          position: absolute;
+          width: 50%;
+          height: 100%;
+          background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+          padding: 40px;
+          color: #1f2937;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          text-align: left;
+          transform-style: preserve-3d;
+          border-radius: 8px 0 0 8px;
+          transform: rotateY(180deg);
+          right: 0;
+          overflow-y: auto;
         }
 
         .page-wrapper {
@@ -203,6 +317,25 @@ export default function InteractiveBook() {
           background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, transparent 70%);
           border-radius: 50%;
         }
+
+        .cover-title {
+          font-size: 48px;
+          font-weight: bold;
+          color: #1e40af;
+          margin-bottom: 16px;
+        }
+
+        .cover-subtitle {
+          font-size: 18px;
+          color: #6b7280;
+          margin-bottom: 24px;
+        }
+
+        .cover-text {
+          font-size: 16px;
+          color: #374151;
+          line-height: 1.6;
+        }
       `}</style>
 
       <div className="flex flex-col items-center space-y-8 w-full">
@@ -214,42 +347,52 @@ export default function InteractiveBook() {
         </div>
 
         <div className="book-container">
-          <div className="book">
-            {/* Left Page */}
-            <div className="page-wrapper left-page-wrapper">
-              <div
-                className={`page left ${isFlipping && flipDirection === 'left' ? 'flipping-left' : ''}`}
-              >
-                {currentPage > 0 ? (
-                  <>
-                    <h2>{pages[getLeftPage()].title}</h2>
-                    <p>{pages[getLeftPage()].content}</p>
-                    <div className="page-number">Page {getLeftPage() + 1}</div>
-                  </>
-                ) : (
-                  <div className="flex items-center justify-center h-full text-gray-400">
-                    <p className="text-center">Open the book to begin</p>
+          <div className={`book ${isCoverPage ? 'cover-view' : ''}`}>
+            {isCoverPage ? (
+              <div className="cover-wrapper">
+                <div className="cover-page">
+                  <div className="cover-title">Code of Conduct</div>
+                  <div className="cover-subtitle">Digital Handbook</div>
+                  <div className="cover-text">
+                    Click the arrow to open and explore
                   </div>
-                )}
+                </div>
               </div>
-            </div>
+            ) : (
+              <>
+                <div className="page-wrapper left-page-wrapper">
+                  <div
+                    className={`page left ${isFlipping && flipDirection === 'left' ? 'flipping-left' : ''}`}
+                  >
+                    {currentPage > 0 ? (
+                      <>
+                        <h2>{pages[getLeftPage()].title}</h2>
+                        <p>{pages[getLeftPage()].content}</p>
+                        <div className="page-number">Page {getLeftPage() + 1}</div>
+                      </>
+                    ) : (
+                      <div className="flex items-center justify-center h-full text-gray-400">
+                        <p className="text-center">Open the book to begin</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
 
-            {/* Center Spine */}
-            <div className="page-spine" />
+                <div className="page-spine" />
 
-            {/* Right Page */}
-            <div className="page-wrapper right-page-wrapper">
-              <div
-                className={`page right ${isFlipping && flipDirection === 'right' ? 'flipping-right' : ''}`}
-              >
-                <h2>{pages[getRightPage()].title}</h2>
-                <p>{pages[getRightPage()].content}</p>
-                <div className="page-number">Page {getRightPage() + 1}</div>
-              </div>
-            </div>
+                <div className="page-wrapper right-page-wrapper">
+                  <div
+                    className={`page right ${isFlipping && flipDirection === 'right' ? 'flipping-right' : ''}`}
+                  >
+                    <h2>{pages[getRightPage()].title}</h2>
+                    <p>{pages[getRightPage()].content}</p>
+                    <div className="page-number">Page {getRightPage() + 1}</div>
+                  </div>
+                </div>
 
-            {/* Book Shadow */}
-            <div className="book-shadow" />
+                <div className="book-shadow" />
+              </>
+            )}
           </div>
         </div>
 
@@ -268,32 +411,18 @@ export default function InteractiveBook() {
             <ChevronLeft className="h-6 w-6" />
           </button>
 
-          <div className="flex gap-2">
-            {pages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  if (index !== currentPage && !isFlipping) {
-                    if (index > currentPage) {
-                      setFlipDirection('right');
-                    } else {
-                      setFlipDirection('left');
-                    }
-                    setIsFlipping(true);
-                    setTimeout(() => {
-                      setCurrentPage(index);
-                      setIsFlipping(false);
-                    }, 700);
-                  }
-                }}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentPage
-                    ? 'bg-blue-600 w-8'
-                    : 'bg-gray-600 w-2 hover:bg-gray-500'
-                }`}
-                aria-label={`Go to page ${index + 1}`}
-              />
-            ))}
+          <div className="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg">
+            <input
+              type="number"
+              min="1"
+              max={pages.length}
+              value={searchInput}
+              onChange={handleSearchChange}
+              placeholder="Go to..."
+              className="w-16 bg-gray-700 text-white text-center rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-300 font-semibold">{pages.length}</span>
           </div>
 
           <button
