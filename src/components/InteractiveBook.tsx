@@ -156,7 +156,7 @@ export default function InteractiveBook() {
         }
 
         .book {
-          position: relative;
+          position: middle;
           width: 100%;
           max-width: 800px;
           height: 500px;
