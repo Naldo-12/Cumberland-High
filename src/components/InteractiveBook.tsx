@@ -9,6 +9,11 @@ export default function InteractiveBook() {
 
   const pages = [
     {
+      title: 'Cumberland High School THE TVET CENTRE OF EXECELLENCE',
+      content: 'Student Code of Conduct.',
+      isCover: true,
+    },
+    {
       title: 'Code of Conduct',
       content: 'Welcome to your digital handbook! This is the cover page.',
       isCover: true,
