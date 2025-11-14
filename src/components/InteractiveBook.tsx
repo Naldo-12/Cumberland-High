@@ -21,8 +21,7 @@ export default function InteractiveBook() {
     },
     {
       title: 'Table of Contents',
-      content: 'Vision Statement..............................................iv'
-      'Mission Statement..............................................iv',
+      content: 'Vision Statement..............................................iv',
       isCover: false,
     },
     {
