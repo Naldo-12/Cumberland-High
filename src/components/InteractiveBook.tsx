@@ -14,13 +14,14 @@ export default function InteractiveBook() {
       isCover: true,
     },
     {
-      title: 'Code of Conduct',
-      content: 'Welcome to your digital handbook! This is the cover page.',
+      title: 'Cumberland High School',
+      content: 'Student Code of Conduct.',
+      content: '2019-2020.',
       isCover: true,
     },
     {
-      title: 'Respect & Integrity',
-      content: 'Students are expected to treat all peers, staff, and property with respect. Integrity is the foundation of our school community.',
+      title: 'Table of Contents',
+      content: 'Vision Statement...................iv',
       isCover: false,
     },
     {
