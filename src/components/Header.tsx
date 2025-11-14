@@ -9,14 +9,24 @@ interface HeaderProps {
 export default function Header({ onNavigate, currentPage }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleAnchorClick = (href: string) => {
+    if (currentPage !== 'home') {
+      onNavigate('home');
+    }
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }, 0);
+  };
+
   const navItems = [
     { name: 'Home', page: 'home' as const },
-    { name: 'About', href: '#about' },
-    { name: 'Programs', href: '#programs' },
-    { name: 'Events', href: '#events' },
-    { name: 'News', href: '#news' },
+    { name: 'About', anchor: '#about' },
+    { name: 'Programs', anchor: '#programs' },
+    { name: 'Events', anchor: '#events' },
+    { name: 'News', anchor: '#news' },
     { name: 'Code of Conduct', page: 'codeofconduct' as const },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', anchor: '#contact' },
   ];
 
   return (
@@ -38,16 +48,13 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
                 onClick={() => {
                   if ('page' in item) {
                     onNavigate(item.page);
+                  } else if ('anchor' in item) {
+                    handleAnchorClick(item.anchor);
                   }
                 }}
-                href={('href' in item) ? item.href : undefined}
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
-                {'href' in item ? (
-                  <a href={item.href}>{item.name}</a>
-                ) : (
-                  item.name
-                )}
+                {item.name}
               </button>
             ))}
           </div>
@@ -68,16 +75,14 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
                 onClick={() => {
                   if ('page' in item) {
                     onNavigate(item.page);
+                  } else if ('anchor' in item) {
+                    handleAnchorClick(item.anchor);
                   }
                   setMobileMenuOpen(false);
                 }}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md font-medium transition-colors"
               >
-                {'href' in item ? (
-                  <a href={item.href} onClick={(e) => e.stopPropagation()}>{item.name}</a>
-                ) : (
-                  item.name
-                )}
+                {item.name}
               </button>
             ))}
           </div>
