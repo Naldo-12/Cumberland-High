@@ -50,7 +50,7 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               
-              </a>
+             
             </div>
             <p className="text-gray-400 text-sm">
               1000 Cumberland Drive<br />
