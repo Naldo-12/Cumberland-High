@@ -7,6 +7,15 @@ export default function InteractiveBook() {
 
   const pages = [
     { title: 'Code of Conduct', content: 'Welcome to your digital handbook!' },
+     { 
+        title: 'Table of Contents',
+        content: `
+        1. Respect & Integrity
+        2. Attendance & Punctuality
+        3. Dress Code
+        4. Academic Honesty
+            `
+     },
     { title: 'Respect & Integrity', content: 'Students are expected to treat all peers, staff, and property with respect.' },
     { title: 'Attendance & Punctuality', content: 'Regular attendance and punctuality are required to maintain good standing.' },
     { title: 'Dress Code', content: 'Students must adhere to the school’s dress code policy at all times.' },
@@ -105,14 +114,10 @@ export default function InteractiveBook() {
         <div className="book-scene">
           <div className={`book ${currentPage === 0 ? 'closed' : 'open'}`}>
             <div className="page front">
-              <img
-                src="/coc-cover.png"
-                alt="Code of Conduct Cover"
-                className="w-full h-full object-cover"
-              />
-            
+              <h2 className="text-3xl font-bold mb-4">{pages[0].title}</h2>
+              <p className="text-gray-300">{pages[0].content}</p>
               {currentPage === 0 && (
-                <p className="absolute bottom-4 right-4 text-blue-400 animate-pulse text-lg">
+                <p className="mt-6 text-blue-400 animate-pulse">
                   Click ➡ to open
                 </p>
               )}
