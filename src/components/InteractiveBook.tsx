@@ -105,8 +105,11 @@ export default function InteractiveBook() {
         <div className="book-scene">
           <div className={`book ${currentPage === 0 ? 'closed' : 'open'}`}>
             <div className="page front">
-              <h2 className="text-3xl font-bold mb-4">{pages[0].title}</h2>
-              <p className="text-gray-300">{pages[0].content}</p>
+              <img
+                src="/cover.png"
+                alt="Code of Conduct Cover"
+                className="w-full h-full object-cover"
+              />
               {currentPage === 0 && (
                 <p className="mt-6 text-blue-400 animate-pulse">
                   Click ➡ to open
