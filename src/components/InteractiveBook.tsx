@@ -126,7 +126,9 @@ export default function InteractiveBook() {
               <h2 className="text-2xl font-semibold mb-4">
                 {pages[currentPage].title}
               </h2>
-              <p>{pages[currentPage].content}</p>
+              <p className="whitespace-pre-line font-mono tracking-wide">
+                {pages[currentPage].content}
+              </p>
               <div className="text-sm text-gray-500 mt-4">
                 Page {currentPage + 1} of {pages.length}
               </div>
