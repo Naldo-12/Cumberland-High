@@ -10,10 +10,10 @@ export default function InteractiveBook() {
      { 
         title: 'Table of Contents',
         content: `
-        1. Respect & Integrity
-        2. Attendance & Punctuality
-        3. Dress Code
-        4. Academic Honesty
+        Respect & Integrity....................1
+        Attendance & Punctuality...............2
+        Dress Code..............................3
+        Academic Honesty.......................4
             `
      },
     { title: 'Respect & Integrity', content: 'Students are expected to treat all peers, staff, and property with respect.' },
