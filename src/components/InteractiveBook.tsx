@@ -41,10 +41,16 @@ export default function InteractiveBook() {
   ];
 
   const tableOfContents = [
-    { title: 'Respect & Integrity', page: 3 },
-    { title: 'Attendance & Punctuality', page: 4 },
-    { title: 'Dress Code', page: 5 },
-    { title: 'Academic Honesty', page: 6 },
+    { title: 'Vision Statement', page: 3 },
+    { title: 'Mission Statement', page: 4 },
+    { title: 'School Motto', page: 5 },
+    { title: 'School Song', page: 6 },
+    { title: 'Core Values', page: 6 },
+    { title: 'School Creed', page: 6 },
+    { title: 'Disciplinary Policy', page: 6 },
+    { title: 'Rationale', page: 6 },
+    { title: 'Purpose of the Document', page: 6 },
+    { title: 'Orientation', page: 6 },
   ];
 
   const isCoverPage = currentPage === 0;
